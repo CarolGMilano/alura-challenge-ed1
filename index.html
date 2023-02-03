@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Projeto de um editor de código para redes sociais. Desafio da Alura. Autora: Carol Milano.">
+
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <link rel="shortcut icon" href="assets/img/logo-dev.svg" type="image/x-icon">
+        <title>AluraDev</title>
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <img src="assets/img/Logo.svg" alt="Home AluraDev" class="cabecalho__logo">
+
+            <div class="cabecalho__busca">
+                <label for="inputBusca"></label>
+                <input type="search" id="inputBusca" class="busca__input" placeholder="Busque por algo">
+
+                <div class="busca__fechar"></div>
+            </div>
+
+            <div class="cabecalho__container">
+                <div class="container__busca"></div>
+                <div class="container__menu"></div>
+            </div>
+
+            <div class="cabecalho__perfil">
+                <span class="perfil__foto"></span> 
+                <h2 class="perfil__nome">Harry</h2>
+            </div>
+        </header>
+
+        <section class="container">
+            <aside class="aside">
+                <h1 class="aside__titulo">Menu</h1>
+                <ul>
+                    <li class="aside__editor">
+                        <span class="editor__icone"></span> Editor de código
+                    </li>
+    
+                    <li class="aside__comunidade">
+                        <span class="comunidade__icone"></span> Comunidade
+                    </li>
+    
+                    <!-- <li class="aside__perfil">
+                        <span class="perfil__foto"></span> Harry
+                    </li> -->
+                </ul>
+            </aside>
+
+            <main class="corpo">
+                <section class="corpo__editor">
+                    <div class="editor__janela">
+                        <div class="janela__container">
+                            <span class="container__botoes"></span>
+    
+                            <textarea cols="32" rows="23" class="container__code"></textarea>
+                        </div>
+                    </div>
+
+                    <button class="editor__highlight">Visualizar com o highlight</button>
+                </section>
+
+                <section class="corpo__status">
+                    <div class="status__projeto">
+                        <h2 class="projeto__titulo">Seu projeto</h2>
+
+                        <label for="inputNome"></label>
+                        <input type="text" id="inputNome" class="projeto__nome" placeholder="Nome do seu projeto">
+
+                        <textarea cols="3" rows="4" placeholder="Descrição do seu projeto" class="projeto__descricao"></textarea>
+                    </div>
+
+                    <div class="status__personalizacao">
+                        <h3 class="personalizacao__titulo">Personalização</h3>
+
+                        <div class="personalizacao__container">
+                            <select>
+                                <option value="javascript">JavaScript</option>
+                                <option value="css">CSS</option>
+                                <option value="html">HTML</option>
+                            </select>
+
+                            <label for="inputCor"></label>
+                            <input type="color" id="inputCor" class="container__cor">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="status__salvarProjeto">Salvar projeto</button>
+                </section>
+            </main>
+        </section>
+    </body>
+</html>

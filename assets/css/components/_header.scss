@@ -1,0 +1,134 @@
+@import '../abstract/_var.scss';
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .cabecalho__logo {
+        width: 145px;
+        height: auto;
+    }
+
+    .cabecalho__busca {
+        display: none;
+        //display: flex;
+
+        .busca__input {
+            font-family: $fonte;
+            border: none;
+            border-radius: 5px;
+            background-color: $cinza-suave;
+            padding: 1rem;
+            flex-grow: 1;
+
+            &::placeholder {
+                font-weight: 400;
+                color: $branco;
+                font-size: 14px;
+                opacity: .5;
+            }
+        }
+
+        .busca__fechar {
+            width: 48px;
+            height: 48px;
+            background: url("../img/icone-fechar.svg") center no-repeat;
+        }
+    }
+
+    .cabecalho__container {
+        display: flex;
+        column-gap: .5rem;
+
+        .container__busca,
+        .container__menu {
+            width: 48px;
+            height: 48px;
+        }
+
+        .container__busca {
+            background: url("../img/search.svg") no-repeat center;
+        }
+
+        .container__menu {
+            background: url("../img/menu.svg") no-repeat center;
+        }
+    }
+
+    .cabecalho__perfil {
+        display: none;
+        align-items: center;
+        column-gap: .5rem;
+        position: absolute;
+        top: 250px;
+        right: 140px;
+        z-index: 1;
+
+        .perfil__nome {
+            color: $branco;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .perfil__foto {
+            width: 32px;
+            height: 32px;
+            background: url('../img/foto-perfil.png') no-repeat center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho {
+        justify-content: start;
+        column-gap: 2.5rem;
+
+        .cabecalho__busca {
+            display: block;
+            flex-grow: 1;
+
+            .busca__input {
+                width: 100%;
+                height: 56px;
+            }
+
+            .busca__fechar {
+                display: none;
+            }
+        }
+
+        .cabecalho__container {
+            .container__busca {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        width: 1370px;
+        column-gap: 10.5rem;
+        margin: 0 auto 2.5rem auto;
+
+        .cabecalho__busca {
+            width: 752px;
+            flex-grow: 0;
+            .busca__input{
+                width: 752px;
+            }   
+        }
+
+        .cabecalho__container {
+            display: none;
+        }
+
+        .cabecalho__perfil {
+            display: flex;
+            position: initial;
+            flex-grow: 1;
+            justify-content: end;
+        }
+    }
+}
